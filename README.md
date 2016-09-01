@@ -14,6 +14,12 @@ To get started with the app, clone the repo, move into it, and then install the 
 $ bundle install
 ```
 
+Import guide info:
+
+```
+$ rake db:import_guide_data
+```
+
 Next, migrate the database:
 
 ```
