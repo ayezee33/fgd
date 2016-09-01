@@ -24,8 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # add bootstrap 4
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
-# add sprockets
-gem 'sprockets-rails', '~> v2.3.2'
+# add tzinfo
+gem 'tzinfo-data'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
