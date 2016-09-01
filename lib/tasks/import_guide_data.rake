@@ -1,7 +1,7 @@
 namespace :db do
   desc "imports guide data from guide-data.json"
    task :import_guide_data => :environment do
-     file = File.read('lib\assets\guide-data.json')
+     file = File.read('lib/assets/guide-data.json')
      parsed_data = JSON.parse(file)
      parsed_data.map do |line|
          g = Guide.new
