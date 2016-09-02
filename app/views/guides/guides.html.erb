@@ -1,4 +1,10 @@
 <h1>Guide info will go here</h1>
 
-<%= @guides.each do %>
+<%= Guide.find_each do |guide| %>
+  <div>
+    <h1><%= guide.guide_name %></h1>
+    <h3><%= guide.address %></h3>
+    <h3><%= guide.city %>, <%= guide.state %></h3>
+    <h3><%= guide.phone_number %></h3>
+  </div>
 <% end %>
