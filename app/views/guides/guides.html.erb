@@ -1,2 +1,28 @@
-<h1>Guides#guides</h1>
-<p>Find me in app/views/guides/guides.html.erb</p>
+<h1>Guide info will go here</h1>
+
+<%= form_tag(guides_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Guides" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% if @guides.present? %>
+  <%= for guide in @guides do %>
+    <div>
+      <h1><%= guide.guide_name %></h1>
+      <h3><%= guide.address %></h3>
+      <h3><%= guide.city %>, <%= guide.state %></h3>
+      <h3><%= guide.phone_number %></h3>
+    </div>
+  <% end %>
+<% elsif @guides.empty? %>
+  <h2>Looks like we didn't find any results with '<%= params[:search] %>'. Try again!</h2>
+<% else %>
+  <%= Guide.find_each do |guide| %>
+    <div>
+      <h1><%= guide.guide_name %></h1>
+      <h3><%= guide.address %></h3>
+      <h3><%= guide.city %>, <%= guide.state %></h3>
+      <h3><%= guide.phone_number %></h3>
+    </div>
+  <% end %>
+<% end %>

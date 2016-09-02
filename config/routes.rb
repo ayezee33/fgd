@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'guides/guides'
 
   root "guides#guides"
+  get '/guides' => 'guides#guides'
+
 end
