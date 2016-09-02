@@ -1,10 +1,39 @@
-<h1>Guide info will go here</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-lg-6"><!--Start of Left Hand Column-->
+      <h2>Map can go here</h2>
+    </div><!--End of Left Hand Column-->
+    <div class="col-sm-12 col-lg-6"><!--Start of Right Hand Column-->
+      <div class="form-group"><!--Guide Search Function-->
+        <%= form_tag(guides_path, :class=>"form-inline", :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Guides", :class=>"form-control" %>
+            <%= submit_tag "Search", :class=>"btn btn-primary", :name => nil %>
+        <% end %>
+      </div>
 
-<%= Guide.find_each do |guide| %>
-  <div>
-    <h1><%= guide.guide_name %></h1>
-    <h3><%= guide.address %></h3>
-    <h3><%= guide.city %>, <%= guide.state %></h3>
-    <h3><%= guide.phone_number %></h3>
-  </div>
-<% end %>
+      <% if @guides.present? %>
+        <% for guide in @guides do %>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="card card-block">
+            <h2 class="card-title"><%= guide.guide_name %></h2>
+            <p class="lead m-b-0"><%= guide.address %></p>
+            <p class="m-b-0"><%= guide.city %>, <%= guide.state %></p>
+            <p><%= guide.phone_number %></p>
+          </div>
+        </div>
+        <% end %>
+      <% elsif @guides.empty? %>
+        <h2>Looks like we didn't find any results with '<%= params[:search] %>'. Try again!</h2>
+      <% else %>
+        <%= Guide.find_each do |guide| %>
+          <div>
+            <h1><%= guide.guide_name %></h1>
+            <h3><%= guide.address %></h3>
+            <h3><%= guide.city %>, <%= guide.state %></h3>
+            <h3><%= guide.phone_number %></h3>
+          </div>
+        <% end %>
+      <% end %>
+    </div><!--End Of Right Hand Column-->
+  </div><!--End Row-->
+</div><!--End Container-->

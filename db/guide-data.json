@@ -558,5 +558,222 @@
     "city": "Tillamook",
     "state": "Oregon",
     "phone_number": "(503) 803-2616"
+  },
+  {
+    "guide_name": "A & B Pro Guides and Charters - OR & WA",
+    "address": "5530B NE 122nd #117, Portland, OR, 97230",
+    "city": "Portland",
+    "state": "Oregon",
+    "phone_number": "(503) 720-9033"
+  },
+  {
+    "guide_name": "Adventure Center",
+    "address": "40 North Main, Ashland, OR, 97520",
+    "city": "Ashland",
+    "state": "Oregon",
+    "phone_number": "(800) 444-2819"
+  },
+  {
+    "guide_name": "All Hooked Up Guide Service",
+    "address": "3608 Layjolla Cres. AptA, Klamath Falls, OR, 97603",
+    "city": "Klamath Falls",
+    "state": "Oregon",
+    "phone_number": "(541) 281-7756"
+  },
+  {
+    "guide_name": "All Team Hook Up",
+    "address": "12332 sw 72nd ave, Tigard, OR, 97223",
+    "city": "Tigard",
+    "state": "Oregon",
+    "phone_number": "(503) 505-8155"
+  },
+  {
+    "guide_name": "All Team Hooked Up Guided Service",
+    "address": "12332 SW 72nd Ave, Tigard, OR, 97223",
+    "city": "Tigard",
+    "state": "Oregon",
+    "phone_number": "(503) 505-8155"
+  },
+  {
+    "guide_name": "aoacharters.com - AOA Charters",
+    "address": "79733 Hamlet Rd., Seaside, OR, 97138",
+    "city": "Seaside",
+    "state": "Oregon",
+    "phone_number": "(503) 717-2201"
+  },
+  {
+    "guide_name": "Aqua Therapy NW",
+    "address": "P.O. Box 1029, Sandy, OR, 97055",
+    "city": "Sandy",
+    "state": "Oregon",
+    "phone_number": "(503) 320-8396"
+  },
+  {
+    "guide_name": "Backeddy Guide Service",
+    "address": "14800 S.E. River Forest Dr., Milwaukie, OR, 97267",
+    "city": "Milwaukie",
+    "state": "Oregon",
+    "phone_number": "(503) 318-5262"
+  },
+  {
+    "guide_name": "Barrows Outdoors",
+    "address": "24974 HIGH PASS RD, Junction city, OR, 97448",
+    "city": "Junction city",
+    "state": "Oregon",
+    "phone_number": "(541) 517-3297"
+  },
+  {
+    "guide_name": "Betty Kay Charters-Fishing",
+    "address": "Po Box 5020, Coos Bay, OR, 97420",
+    "city": "Coos Bay",
+    "state": "Oregon",
+    "phone_number": "(541) 888-9021"
+  },
+  {
+    "guide_name": "Big Fish Guide Service",
+    "address": "2495 Wasco Street, Hood River, OR, 97031",
+    "city": "Hood River",
+    "state": "Oregon",
+    "phone_number": "(541) 387-0273"
+  },
+  {
+    "guide_name": "Blue Eagle Fishing Adventures",
+    "address": "Hermiston Plaza, Hermiston, OR, 97838",
+    "city": "Hermiston",
+    "state": "Oregon",
+    "phone_number": "(541) 567-6117"
+  },
+  {
+    "guide_name": "Blue Mountain Anglers & Fly Shop, LLC",
+    "address": "1847 Westgate, Pendleton, OR, 97801",
+    "city": "Pendleton",
+    "state": "Oregon",
+    "phone_number": "(541) 966-8770"
+  },
+  {
+    "guide_name": "Bob Cobb's Reel Fishing Trips",
+    "address": "Po Box 441, Reedsport, OR, 97467",
+    "city": "Reedsport",
+    "state": "Oregon",
+    "phone_number": "(541) 271-3850"
+  },
+  {
+    "guide_name": "Bob Stockdall's Guide Service",
+    "address": "633 NW Reed LN, Dallas, OR, 97338",
+    "city": "Dallas",
+    "state": "Oregon",
+    "phone_number": "(541) 521-2914"
+  },
+  {
+    "guide_name": "Bob Toman Guide Service",
+    "address": "18721 Southeast Semple Road, Clackamas, OR, 97015",
+    "city": "Clackamas",
+    "state": "Oregon",
+    "phone_number": "(503) 658-6493"
+  },
+  {
+    "guide_name": "Bob's Guide Service",
+    "address": "7624 NE Siskiyou, Portland, OR, 97213",
+    "city": "Portland",
+    "state": "Oregon",
+    "phone_number": "(800) 235-7135"
+  },
+  {
+    "guide_name": "Bob's Sportfishing",
+    "address": "63486 Albacore, Charleston, OR, 97420",
+    "city": "Charleston",
+    "state": "Oregon",
+    "phone_number": "(541) 888-4241"
+  },
+  {
+    "guide_name": "Tidewind Sportfishing Ocean Charter",
+    "address": "16368 Lower Harbor Road, Brookings, OR, 97415",
+    "city": "Brookings",
+    "state": "Oregon",
+    "phone_number": "(541) 469-0337"
+  },
+  {
+    "guide_name": "Todd Puett Guide Service",
+    "address": "6575 Rogue River Drive, Shady Cove, OR, 97539",
+    "city": "Shady Cove",
+    "state": "Oregon",
+    "phone_number": "(541) 840-0843"
+  },
+  {
+    "guide_name": "Tradewinds Sportfishing-Newport - Newport Tradewinds",
+    "address": "653 Southwest Bay Boulevard, Newport, OR, 97365",
+    "city": "Newport",
+    "state": "Oregon",
+    "phone_number": "(541) 265-2101"
+  },
+  {
+    "guide_name": "Triple S Guide Service",
+    "address": "159 SW Florence Ave. #F31, Gresham, OR, 97080",
+    "city": "Gresham",
+    "state": "Oregon",
+    "phone_number": "(503) 666-3710"
+  },
+  {
+    "guide_name": "Troller Deep Sea Charter",
+    "address": "304 Mooring Basin Road, Garibaldi, OR, 97118",
+    "city": "Garibaldi",
+    "state": "Oregon",
+    "phone_number": "(503) 322-3666"
+  },
+  {
+    "guide_name": "United Country Clemens Real Estate",
+    "address": "90 W Adams, Burns, OR, 97720",
+    "city": "Burns",
+    "state": "Oregon",
+    "phone_number": "(541) 573-2621"
+  },
+  {
+    "guide_name": "Walleye Willies Guide Service",
+    "address": "2521 E 12th, The Dalles, OR, 97058",
+    "city": "The Dalles",
+    "state": "Oregon",
+    "phone_number": "(541) 993-7335"
+  },
+  {
+    "guide_name": "Water Time Outfitters",
+    "address": "20123 S. Henry Rd, Oregon city, OR, 97045",
+    "city": "Oregon city",
+    "state": "Oregon",
+    "phone_number": "(503) 704-6449"
+  },
+  {
+    "guide_name": "Wild Rivers Fishing (Chetco River Guide Service)",
+    "address": "600 Easy Street, Brookings, OR, 97415",
+    "city": "Brookings",
+    "state": "Oregon",
+    "phone_number": "(541) 813-1082"
+  },
+  {
+    "guide_name": "Wildlife Fishing Adventures",
+    "address": "13610 Barclay Hills Dr, Oregon city, OR, 97045",
+    "city": "Oregon city",
+    "state": "Oregon",
+    "phone_number": "(503) 650-8280"
+  },
+  {
+    "guide_name": "Willow Run Farm",
+    "address": "26920 South Crooked River Highway, Prineville, OR, 97754",
+    "city": "Prineville",
+    "state": "Oregon",
+    "phone_number": "(541) 576-2825"
+  },
+  {
+    "guide_name": "Winchesterbay Charters",
+    "address": "PO Box 658, Oakland, OR, 97462",
+    "city": "Oakland",
+    "state": "Oregon",
+    "phone_number": "(541) 408-1128"
+  },
+  {
+    "guide_name": "Young's Fishing Service Inc",
+    "address": "720 East 14th Street, The Dalles, OR, 97058",
+    "city": "The Dalles",
+    "state": "Oregon",
+    "phone_number": "(541) 296-5371"
   }
 ]
