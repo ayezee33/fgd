@@ -20,11 +20,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
+# Bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-# add bootstrap 4
+# Use bootstrap 4
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
-# add tzinfo
+# Use tzinfo
 gem 'tzinfo-data'
 
 # Use ActiveModel has_secure_password
@@ -39,6 +39,9 @@ gem 'tzinfo-data'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # Install Rspec and Capybara for testing
+  gem 'rspec-rails', '~> 3.5'
+  gem 'capybara'
 end
 
 group :development do
