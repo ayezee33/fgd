@@ -16,4 +16,7 @@
 
 /* Custom bootstrap variables must be set or imported before bootstrap itself.*/
  @import "bootstrap";
- @import "guides"
+ @import "guides";
+
+ html, body { height: 100%; margin: 0; padding: 0; }
+ #map { height: 800px; }

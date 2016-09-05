@@ -1,7 +1,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-lg-6"><!--Start of Left Hand Column-->
-      <h2>Map can go here</h2>
+      <div id="map">
+      </div>
     </div><!--End of Left Hand Column-->
     <div class="col-sm-12 col-lg-6"><!--Start of Right Hand Column-->
       <div class="form-group"><!--Guide Search Function-->
@@ -37,3 +38,13 @@
     </div><!--End Of Right Hand Column-->
   </div><!--End Row-->
 </div><!--End Container-->
+<script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 45.5903359, lng: -120.402882},
+      zoom: 7
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.GOOGLE_MAPS %>&callback=initMap" async defer></script>
