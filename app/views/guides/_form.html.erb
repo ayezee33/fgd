@@ -1,4 +1,3 @@
 <%= form_for @guide do |f| %>
-  <%= f.input :title, placeholder: 'Guide Name' %>
-  <%= f.button :submit, "Save", class: "button" %>
+  <%= f.text_field :guide_name %>
 <% end %>

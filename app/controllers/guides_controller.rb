@@ -16,15 +16,24 @@ class GuidesController < ApplicationController
     end
   end
 
-  def new
-    @guide = Guide.new
-  end
+  # def new
+  #   @guide = Guide.new
+  # end
 
   def edit
+    @guide = Guide.find(params[:id])
   end
 
-  def show
+  def update
+    @guide = Guide.find(params[:id])
+      @guide.update!(guide_params)
+      redirect_to @guide
   end
 
+
+  private
+    def guide_params
+      params.require(:guide).permit(:guide_name)
+    end
 
 end
