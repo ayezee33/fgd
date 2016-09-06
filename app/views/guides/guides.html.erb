@@ -38,13 +38,41 @@
     </div><!--End Of Right Hand Column-->
   </div><!--End Row-->
 </div><!--End Container-->
-<script>
-  var map;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 45.5903359, lng: -120.402882},
-      zoom: 7
-    });
-  }
-</script>
+
+<%= javascript_tag do %>
+
+    var map;
+
+    function initMap() {
+      geocoder = new google.maps.Geocoder();
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 45.5903359, lng: -120.402882},
+        zoom: 7
+      });
+      <%= Guide.find_each do |guide| %>
+
+        var name = "<%=j guide.guide_name %>";
+        var address = "<%=j guide.address %>";
+        
+        codeAddress(name, address);
+      <% end %>
+    }
+
+    function codeAddress(name, address) {
+      geocoder.geocode({
+        address: address
+      }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          //place a marker at the location
+          var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location,
+              title: name
+          });
+        } else {
+          console.log('Geocode was not successful for the following reason: ' + status);
+       }
+      });
+    }
+<% end %>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.GOOGLE_MAPS %>&callback=initMap" async defer></script>
