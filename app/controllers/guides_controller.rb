@@ -30,10 +30,14 @@ class GuidesController < ApplicationController
       redirect_to @guide
   end
 
+  def show
+    @guide = Guide.find(params[:id])
+  end
+
 
   private
     def guide_params
-      params.require(:guide).permit(:guide_name)
+      params.require(:guide).permit(:guide_name, :address, :city, :state, :phone_number)
     end
 
 end
