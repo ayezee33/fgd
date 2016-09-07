@@ -1,12 +1,22 @@
+<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="display-3"><%= @guide.guide_name %></h1>
+				<p class="lead">Unique content about the guide can go here</p>
+				<p class="m-b-0"><%= @guide.city %> <%= @guide.state %></p>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-12 col-lg-6">
 			<div class="card card-block">
-				<h2 class="card-title"><%= @guide.guide_name %></h2>
+				<h4>Contact Information</h4>
 				<p class="lead m-b-0"><%= @guide.address %></p>
-				<p class="m-b-0"><%= @guide.city %>, <%= @guide.state %></p>
 				<p><%= @guide.phone_number %></p>
-				<%= link_to "Edit", edit_guide_path(@guide) %>
 			</div>
 		</div>
 	</div>
