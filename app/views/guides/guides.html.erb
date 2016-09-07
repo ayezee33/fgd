@@ -1,11 +1,11 @@
-<div class="container-fluid">
+<div class="container-fluid m-t-3">
   <div class="row">
     <div class="col-sm-12 col-lg-6"><!--Start of Left Hand Column-->
       <h2>Map can go here</h2>
     </div><!--End of Left Hand Column-->
     <div class="col-sm-12 col-lg-6"><!--Start of Right Hand Column-->
       <div class="form-group"><!--Guide Search Function-->
-        <%= form_tag(guides_path, :class=>"form-inline guide-search-form", :method => "get", id: "search-form") do %>
+        <%= form_tag(guides_path, :class=>"form-inline guide-search-form pull-lg-right m-b-2", :method => "get", id: "search-form") do %>
             <%= text_field_tag :search, params[:search], placeholder: "Search Guides", :class=>"form-control" %>
             <%= submit_tag "Search", :class=>"btn btn-primary", :name => nil %>
         <% end %>
@@ -20,6 +20,7 @@
             <p class="m-b-0"><%= guide.city %>, <%= guide.state %></p>
             <p><%= guide.phone_number %></p>
             <%= link_to "Edit", edit_guide_path(guide) %>
+            <a href=""><%= guide.phone_number %></a>
           </div>
         </div>
         <% end %>
