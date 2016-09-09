@@ -37,7 +37,7 @@ class GuidesController < ApplicationController
 
   private
     def guide_params
-      params.require(:guide).permit(:guide_name, :address, :city, :state, :phone_number)
+      params.require(:guide).permit(:guide_name, :address, :city, :state, :phone_number, :guide_descripion)
     end
 
 end
