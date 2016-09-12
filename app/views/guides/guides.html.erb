@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid m-t-3">
   <div class="row">
     <div class="col-sm-12 col-lg-6"><!--Start of Left Hand Column-->
       <h2>Map can go here</h2>
@@ -15,10 +15,16 @@
         <% for guide in @guides do %>
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="card card-block">
-            <h2 class="card-title"><%= guide.guide_name %></h2>
+            <h2 class="card-title"><%= link_to guide.guide_name, guide %></h2>
             <p class="lead m-b-0"><%= guide.address %></p>
             <p class="m-b-0"><%= guide.city %>, <%= guide.state %></p>
             <a href=""><%= guide.phone_number %></a>
+            <% if admin_signed_in? %>
+            <div id="admin-options" class="pull-lg-right">
+              <a class="card-link" href=""><%= link_to "Edit", edit_guide_path(guide) %> | </a>
+              <a class="card-link" href=""><%= link_to "Delete", guide_path(guide), method: :delete, data: { confirm: "Are you sure?" }%></a>
+            </div>
+            <% end %>
           </div>
         </div>
         <% end %>
@@ -31,6 +37,7 @@
             <h3><%= guide.address %></h3>
             <h3><%= guide.city %>, <%= guide.state %></h3>
             <h3><%= guide.phone_number %></h3>
+            <%= link_to "Edit", edit_guide_path(guide) %>
           </div>
         <% end %>
       <% end %>

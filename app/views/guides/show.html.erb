@@ -1,0 +1,25 @@
+<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="display-3"><%= @guide.guide_name %></h1>
+				<p class="m-b-0 location-category lead"><%= @guide.city %> <%= @guide.state %></p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-lg-6">
+			<p class="lead"><%= @guide.guide_description %>
+				Since 1998 - helping families, business groups, individuals fish with best fishing guides, charter boats, outfitters charter boat operators Oregon Washington. Quality Oregon fishing Charters, Fishing guides Portland Oregon, drift boat fish trips, Columbia River fishing white water rafting trips, party boat, scenic cruise on an Oregon river, ocean salmon charter. Fishing Trip Gift Certificates Oregon fishing guides Portland Oregon fishing charters.</p>
+		</div>
+		<div class="col-sm-6 col-lg-6">
+			<div class="card card-block">
+				<h4>Contact Information</h4>
+				<p class="lead m-b-0"><%= @guide.address %></p>
+				<p><%= @guide.phone_number %></p>
+			</div>
+		</div>
+	</div>
+</div>
