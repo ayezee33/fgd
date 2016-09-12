@@ -5,5 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Guide.new( guide_name: "Example Guide", address: "123 Example St", city: "Portland", state: "Oregon", phone_number: "124567890" )
