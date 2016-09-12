@@ -27,6 +27,9 @@ gem 'bootstrap', '~> 4.0.0.alpha3.1'
 # Use tzinfo
 gem 'tzinfo-data'
 
+#Devise auth
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

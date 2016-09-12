@@ -1,7 +1,22 @@
 // Place all the styles related to the Guides controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+.navbar {
+  border-radius: 0;
+}
 .guide-search-form {
-  padding-left: 15px; /*This padding matches up with bs column padding */
+  padding-right: 15px; /*This padding matches up with bs column padding */
+}
+.jumbotron {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+              rgba(0,0,0,0.65) url('fishing.jpg') no-repeat center;
+  background-size: cover;
+  color: white;
+  padding: 9rem 0;
+  border-radius: 0;
+}
+.location-category {
+  display: inline-block;
+  background: rgba(255,255,255,0.3);
+  padding: 10px;
 }
