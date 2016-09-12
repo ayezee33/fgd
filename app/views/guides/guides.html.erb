@@ -18,8 +18,6 @@
           <div class="card card-block">
             <h2 class="card-title"><%= link_to guide.guide_name, guide %></h2>
             <p class="lead m-b-0"><%= guide.address %></p>
-            <p class="m-b-0"><%= guide.latitude %></p>
-            <p class="m-b-0"><%= guide.longitude %></p>
             <p class="m-b-0"><%= guide.city %>, <%= guide.state %></p>
             <a href=""><%= guide.phone_number %></a>
             <% if admin_signed_in? %>
@@ -48,30 +46,30 @@
   </div><!--End Row-->
 </div><!--End Container-->
 
-<%= javascript_tag do %>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.GOOGLE_MAPS %>&callback=initMap" async defer></script>
 
-    var map;
+<%= javascript_tag do %>
 
     function initMap() {
       geocoder = new google.maps.Geocoder();
-      map = new google.maps.Map(document.getElementById('map'), {
+
+      var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 45.5903359, lng: -120.402882},
         zoom: 7
       });
-    }
 
       <%= Guide.find_each do |guide| %>
-        var name = "<%=j guide.guide_name %>";
+        var name = "<%= raw guide.guide_name %>";
         var latitude = <%= guide.latitude %>;
         var longitude = <%= guide.longitude %>;
 
         var marker = new google.maps.Marker({
             map: map,
-            position: "#{latitude}, #{longitude}",
+            position: {lat: latitude, lng: longitude},
             title: name
         });
       <% end %>
 
-<% end %>
+    }
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.GOOGLE_MAPS %>&callback=initMap" async defer></script>
+<% end %>
