@@ -1,5 +1,7 @@
 class GuidesController < ApplicationController
 
+  # before_filter :find_guide
+
   def guides
     if params[:search]
       @guides = Guide.search(params[:search]).order("guide_name")
@@ -7,6 +9,19 @@ class GuidesController < ApplicationController
       @guides = Guide.all.order("guide_name")
     end
   end
+
+
+  def find_guide
+    @guide = Guide.friendly.find params[:id]
+
+    # If an old id or a numeric id was used to find the record, then
+    # the request path will not match the post_path, and we should do
+    # a 301 redirect that uses the current friendly id.
+    if request.path != guide_path(@guide)
+      return redirect_to @guide, :status => :moved_permanently
+    end
+  end
+
 
   def create
     @guide = Guide.new guide_params
@@ -21,23 +36,23 @@ class GuidesController < ApplicationController
   # end
 
   def edit
-    @guide = Guide.find(params[:id])
+    @guide = Guide.friendly.find(params[:id])
   end
 
   def update
-    @guide = Guide.find(params[:id])
+    @guide = Guide.friendly.find(params[:id])
       @guide.update!(guide_params)
       redirect_to @guide
   end
 
   def show
-    @guide = Guide.find(params[:id])
+    @guide = Guide.friendly.find(params[:id])
   end
 
 
   private
     def guide_params
-      params.require(:guide).permit(:guide_name, :address, :city, :state, :phone_number, :guide_descripion)
+      params.require(:guide).permit(:guide_name, :address, :city, :state, :phone_number, :guide_descripion, :slugged)
     end
 
 end
