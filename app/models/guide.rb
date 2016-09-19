@@ -10,7 +10,7 @@ class Guide < ActiveRecord::Base
   after_validation :geocode, :if => :address_changed?
 
   def self.search(search)
-    where("guide_name LIKE ?", "%#{search}%")
+    where("guide_name LIKE ? OR city LIKE ? OR state LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
   end
 
 end
