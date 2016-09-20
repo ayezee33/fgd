@@ -26,9 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 # Use tzinfo
 gem 'tzinfo-data'
-
-#Devise auth
+# Use Devise for auth
 gem 'devise'
+# Use geocoder for converting address to lat, long
+gem 'geocoder'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,6 +46,8 @@ group :development, :test do
   # Install Rspec and Capybara for testing
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
+  # Add dotenv to use environment variables for keys
+  gem 'dotenv-rails'
 end
 
 group :development do

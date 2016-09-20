@@ -6,6 +6,9 @@ class Guide < ActiveRecord::Base
   validates :state, presence: true, length: { minimum: 2, maximum: 12 }
   validates :phone_number, presence: true, length: { minimum: 10, maximum: 16 }
 
+  geocoded_by :address
+  after_validation :geocode, :if => :address_changed?
+
   def self.search(search)
     where("guide_name LIKE ?", "%#{search}%")
   end
