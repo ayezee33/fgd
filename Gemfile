@@ -46,6 +46,8 @@ group :development, :test do
   # Install Rspec and Capybara for testing
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
+  # Add dotenv to use environment variables for keys
+  gem 'dotenv-rails'
 end
 
 group :development do

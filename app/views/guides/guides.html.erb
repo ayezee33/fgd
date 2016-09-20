@@ -46,7 +46,7 @@
   </div><!--End Row-->
 </div><!--End Container-->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.GOOGLE_MAPS %>&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS'] %>&callback=initMap" async defer></script>
 
 <%= javascript_tag do %>
 
