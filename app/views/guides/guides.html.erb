@@ -20,7 +20,7 @@
             <p class="lead m-b-0"><%= guide.address %></p>
             <p class="m-b-0"><%= guide.city %>, <%= guide.state %></p>
             <a href=""><%= guide.phone_number %></a>
-            <% if admin_signed_in? %>
+            <% if current_user.role_id == 4 %>
             <div id="admin-options" class="pull-lg-right">
               <a class="card-link" href=""><%= link_to "Edit", edit_guide_path(guide) %> | </a>
               <a class="card-link" href=""><%= link_to "Delete", guide_path(guide), method: :delete, data: { confirm: "Are you sure?" }%></a>
